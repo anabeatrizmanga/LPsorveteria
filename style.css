@@ -14,13 +14,20 @@
     --card: rgba(255, 255, 255, 0.75);
     --sombra: 0 8px 20px rgba(0, 0, 0, 0.15);
     --radius: 25px;
+    --tituloNuvem: #2b4c7e;
+    --subtexto: #f9f9f9;
+    ;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Fredoka', Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom, var(--azul), var(--branco), var(--rosa));
     color: var(--texto);
     overflow-x: hidden;
+}
+
+strong {
+    color: var(--rosa);
 }
 
 /* header */
@@ -36,6 +43,13 @@ header {
     max-width: 100%;
 }
 
+.tituloNuvem {
+    color: var(--tituloNuvem);
+    font-family: 'Fredoka', sans-serif;
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.18);
+
+}
+
 /* menu */
 nav {
     padding: 20px 5%;
@@ -44,7 +58,7 @@ nav {
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 8px;
     flex-wrap: wrap;
     list-style: none;
 
@@ -63,6 +77,10 @@ nav a {
 nav a:hover {
     background: rgba(255, 255, 255, 0.4);
     transform: scale(1.05);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* main */
@@ -93,7 +111,7 @@ main h3 {
     text-align: center;
     font-size: 2rem;
     margin: 50px 0 25px;
-    color: var(--branco);
+    color: var(--subtexto);
 }
 
 table {
@@ -159,7 +177,7 @@ td:hover {
 .imagemdois img,
 .imagemtres img {
 
-    width: 750px;
+    width: 770px;
     max-width: 100%;
 
     border-radius: 25px;
@@ -341,17 +359,9 @@ footer {
     transition: 0.3s;
 }
 
-
-/* =========================
-   PSEUDO-ELEMENTOS
-========================= */
-h3::after {
-    content: " ☁️";
-}
-
 /* adequação para outros dispostivos*/
 
-/* TABLET */
+/* tablets */
 @media (max-width: 992px) {
 
     main h3 {
@@ -363,7 +373,7 @@ h3::after {
     }
 }
 
-/* CELULAR */
+/* celulares */
 @media (max-width: 768px) {
 
     nav ul {
